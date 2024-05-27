@@ -1,0 +1,18 @@
+version: "3"
+services:
+  react:
+    image: "qattam2002/final-react"
+    mem_limit: 128m
+    hostname: react
+  django:
+    image: "qattam2002/final-django"
+    mem_limit: 512m
+    hostname: api
+    environment:
+      - OPENAI_API_KEY=$OPENAI_API_KEY
+  nginx:
+    image: "qattam2002/final-nginx"
+    mem_limit: 128m
+    hostname: nginx
+    ports:
+      - "80:80"

@@ -1,0 +1,26 @@
+version: '3'
+services:
+  django:
+    build: 
+      dockerfile: Dockerfile.dev
+      context: ./django
+    environment:
+      - OPENAI_API_KEY=sk-proj-fFlp47iPXz2YmWWAF6hMT3BlbkFJurIhIs6POFJJ9Y4rcrOw
+
+  react:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./react
+    volumes:
+      - /home/node/app/node_modules
+      - ./react:/home/node/app
+
+  nginx:
+    restart: always
+    build: 
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      - "3050:80"
+    depends_on:
+      - react
