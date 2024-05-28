@@ -140,4 +140,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-os.environ['OPENAI_API_KEY'] = 'sk-proj-fFlp47iPXz2YmWWAF6hMT3BlbkFJurIhIs6POFJJ9Y4rcrOw'
+os.environ['OPENAI_API_KEY'] = 'Secret Key'

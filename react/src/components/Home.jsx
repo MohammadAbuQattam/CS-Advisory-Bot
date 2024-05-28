@@ -236,7 +236,7 @@ const Home = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   stroke="#212023"
                   strokeWidth={0}
-                  disabled={responseFromAPI || globalIsPrinting}
+                  disabled={responseFromAPI || !globalIsPrinting}
                 >
                   <title>{"submit form"}</title>
                   <path
